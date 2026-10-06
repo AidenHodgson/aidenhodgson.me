@@ -9,6 +9,9 @@
 <meta property="og:description" content="Co-founder of Ghill. Risk Management and Insurance at UGA Terry.">
 <meta property="og:url" content="https://aidenhodgson.me">
 <meta name="theme-color" content="#0b1e26">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Geist:wght@400;500&display=swap" rel="stylesheet">
@@ -77,6 +80,17 @@
   .builds li { padding: 20px 0; border-bottom: 1px solid var(--rule); }
   .builds strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.15; letter-spacing: -.01em; }
   .builds span { display: block; font-size: 15.5px; margin-top: 4px; }
+
+  .goals { list-style: none; margin-top: 34px; border-top: 1px solid var(--rule); }
+  .goals li { font-family: var(--serif); font-weight: 300; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.25; letter-spacing: -.01em; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+
+  .totop { position: fixed; z-index: 6; right: var(--pad); bottom: 28px; width: 44px; height: 44px; border-radius: 50%;
+    border: 1px solid var(--rule); background: rgba(11, 30, 38, .25); color: var(--text); display: grid; place-items: center; cursor: pointer;
+    opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .5s, transform .5s, border-color .3s; }
+  .totop.on { opacity: 1; pointer-events: auto; transform: none; }
+  .totop:hover { border-color: var(--text); }
+  .totop svg { width: 16px; height: 16px; transition: transform .4s cubic-bezier(.2,.7,.1,1); }
+  .totop:hover svg { transform: translateY(-2px); }
 
   .scrollcue { position: absolute; left: 50%; bottom: 36px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 12px; }
   .scrollcue span { display: block; width: 1px; height: 38px; background: var(--text); transform-origin: top; animation: drip 2.6s cubic-bezier(.6,0,.2,1) infinite; }
@@ -155,7 +169,6 @@
         <li><span>Role</span><span>Co-Founder, since April 2026</span></li>
         <li><span>Users</span><span>About 150</span></li>
         <li><span>Revenue</span><span>Generating revenue</span></li>
-        <li><span>Accelerator</span><span>Terry Idea Accelerator, Fall 2026</span></li>
       </ul>
       <a class="cta line-link" href="https://ghill.app">ghill.app</a>
     </div></div>
@@ -181,29 +194,23 @@
     </div></div>
   </section>
 
-  <section class="chapter right" id="airmi" data-name="Projects">
+  <section class="chapter right" id="nearterm" data-name="Goals">
     <div class="inner"><div class="block reveal">
-      <p class="kicker label"><span>05</span><span>Projects</span></p>
-      <h2>AIRMI News</h2>
-      <p>A weekly newsletter on how AI is reshaping insurance and risk. I research, write and send every issue, and built the publishing pipeline on beehiiv, from the signup flow to the send schedule.</p>
-      <ul class="facts">
-        <li><span>Role</span><span>Founder and Editor, since March 2026</span></li>
-      </ul>
-      <a class="cta line-link" href="https://airminews.com">airminews.com</a>
-    </div></div>
-  </section>
-
-  <section class="chapter center" id="nearterm" data-name="Goals">
-    <div class="inner"><div class="block reveal">
-      <p class="kicker label"><span>06</span><span>Goals</span></p>
+      <p class="kicker label"><span>05</span><span>Goals</span></p>
       <h2>This year.</h2>
-      <p>Take Ghill through the Terry Idea Accelerator to Demo Day in front of judges and investors, and run UGA's first Claude hackathon this spring.</p>
+      <p>What I'm working toward before the year is out.</p>
+      <ul class="goals">
+        <li>Land an internship</li>
+        <li>Run a Demo Day</li>
+        <li>Grow the Claude Builder Club to 50+ members</li>
+        <li>Host UGA's first Claude hackathon this spring</li>
+      </ul>
     </div></div>
   </section>
 
   <section class="chapter left" id="education" data-name="Education">
     <div class="inner"><div class="block reveal">
-      <p class="kicker label"><span>07</span><span>Education</span></p>
+      <p class="kicker label"><span>06</span><span>Education</span></p>
       <h2>Business school, focused on risk.</h2>
       <ul class="builds">
         <li><strong>University of Georgia</strong><span>Terry College of Business. B.B.A. in Risk Management and Insurance, expected May 2028.</span></li>
@@ -215,18 +222,21 @@
 
   <section class="chapter center contact" id="contact" data-name="Contact">
     <div class="inner"><div class="block reveal">
-      <p class="kicker label"><span>08</span><span>Contact</span></p>
+      <p class="kicker label"><span>07</span><span>Contact</span></p>
       <h2>Say hello.</h2>
       <a class="mail line-link" href="mailto:aidentjhodgson@gmail.com">aidentjhodgson@gmail.com</a>
       <p class="phone"><a class="line-link" href="tel:+14046657894">(404) 665-7894</a></p>
       <div class="elsewhere">
         <a class="line-link" href="https://linkedin.com/in/aidenhodgson">LinkedIn</a>
         <a class="line-link" href="https://github.com/aidenhodgson">GitHub</a>
+        <a class="line-link" href="https://instagram.com/adnhdgsn">Instagram</a>
         <a class="line-link" href="resume.pdf">Resume</a>
       </div>
     </div></div>
   </section>
 </main>
+
+<button class="totop" id="totop" type="button" aria-label="Back to top"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5"/></svg></button>
 
 <div class="foot"><span>Athens, Georgia. 2026.</span><span>aidenhodgson.me</span></div>
 
@@ -257,6 +267,8 @@
   }, { threshold: 0.25 });
   document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 
+  var totop = document.getElementById('totop');
+  totop.addEventListener('click', function () { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });
   var pCount = document.getElementById('pCount'), pName = document.getElementById('pName'), pBar = document.getElementById('pBar'), progress = document.getElementById('progress');
 
   // ---------- scroll state ----------
@@ -280,6 +292,7 @@
     pName.textContent = chapters[active].dataset.name;
     pBar.style.transform = 'scaleX(' + ((active + (f > 0.5 ? f - 1 : f)) / (chapters.length - 1) + 0.0001) + ')';
     progress.classList.toggle('on', scrollY > innerHeight * 0.5 && active < chapters.length - 1);
+    totop.classList.toggle('on', scrollY > innerHeight * 0.8);
   }
   addEventListener('scroll', readScroll, { passive: true });
   addEventListener('resize', readScroll);
