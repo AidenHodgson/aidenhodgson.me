@@ -92,6 +92,14 @@
   .totop svg { width: 16px; height: 16px; transition: transform .4s cubic-bezier(.2,.7,.1,1); }
   .totop:hover svg { transform: translateY(-2px); }
 
+  .wide .block { max-width: 940px; }
+  .campus { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; margin-top: 44px; text-align: left; border-top: 1px solid var(--rule); }
+  .campus div { padding: 22px 0 24px; border-bottom: 1px solid var(--rule); }
+  .campus strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.15; letter-spacing: -.01em; }
+  .campus em { display: block; font-style: normal; margin-top: 8px; }
+  .campus span { display: block; margin-top: 8px; font-size: 15.5px; }
+  @media (max-width: 860px) { .campus { grid-template-columns: 1fr; } }
+
   .scrollcue { position: absolute; left: 50%; bottom: 36px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 12px; }
   .scrollcue span { display: block; width: 1px; height: 38px; background: var(--text); transform-origin: top; animation: drip 2.6s cubic-bezier(.6,0,.2,1) infinite; }
   @keyframes drip { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
@@ -163,14 +171,13 @@
   <section class="chapter right" id="ghill" data-name="Projects">
     <div class="inner"><div class="block reveal">
       <p class="kicker label"><span>02</span><span>Projects</span></p>
-      <h2>Ghill</h2>
+      <h2><a href="https://ghill.app">Ghill</a></h2>
       <p>A chapter platform for fraternities and sororities: member management, messaging, elections and forms in one place, on the web and iOS. I set the technical direction and ship features with AI coding agents, writing the specs, testing the output and owning each release.</p>
       <ul class="facts">
         <li><span>Role</span><span>Co-Founder, since April 2026</span></li>
         <li><span>Users</span><span>About 150</span></li>
-        <li><span>Revenue</span><span>Generating revenue</span></li>
       </ul>
-      <a class="cta line-link" href="https://ghill.app">ghill.app</a>
+      <a class="cta line-link" href="https://ghill.app">Visit ghill.app</a>
     </div></div>
   </section>
 
@@ -201,28 +208,45 @@
       <p>What I'm working toward before the year is out.</p>
       <ul class="goals">
         <li>Land an internship</li>
-        <li>Run a Demo Day</li>
+        <li>Grow ghill.app to 10 paying chapters</li>
         <li>Grow the Claude Builder Club to 50+ members</li>
+        <li>Run a Demo Day</li>
         <li>Host UGA's first Claude hackathon this spring</li>
       </ul>
     </div></div>
   </section>
 
+  <section class="chapter center wide" id="campus" data-name="Campus">
+    <div class="inner"><div class="block reveal">
+      <p class="kicker label"><span>06</span><span>Campus</span></p>
+      <h2>Involved on campus.</h2>
+      <p>Where most of my time goes outside of class.</p>
+      <div class="campus">
+        <div><strong>Claude Builder Club at UGA</strong><em class="label">Founder and President</em><span>Anthropic's student club for building with Claude, its AI model. Biweekly meetings, build hours, speakers and hands-on workshops.</span></div>
+        <div><strong>Terry Idea Accelerator</strong><em class="label">Fall 2026 cohort</em><span>Terry's semester-long startup accelerator, where student founders pressure-test their business model and go-to-market plan with faculty and mentors.</span></div>
+        <div><strong>Phi Chi Theta</strong><em class="label">Member</em><span>A professional business fraternity at UGA.</span></div>
+        <div><strong>PCT Equity Fund</strong><em class="label">Communication Services sector</em><span>A student-run investment fund. I cover Alphabet (GOOGL), the parent company of Google.</span></div>
+        <div><strong>Society of Entrepreneurs</strong><em class="label">Member</em><span>A community of student founders and builders at UGA.</span></div>
+        <div><strong>AI Society at Terry</strong><em class="label">Member</em><span>A student community at Terry focused on AI in business.</span></div>
+        <div><strong>Red and Black Charity Foundation</strong><em class="label">Founding member</em><span>A student-led charity foundation, started in fall 2026.</span></div>
+      </div>
+    </div></div>
+  </section>
+
   <section class="chapter left" id="education" data-name="Education">
     <div class="inner"><div class="block reveal">
-      <p class="kicker label"><span>06</span><span>Education</span></p>
+      <p class="kicker label"><span>07</span><span>Education</span></p>
       <h2>Business school, focused on risk.</h2>
       <ul class="builds">
         <li><strong>University of Georgia</strong><span>Terry College of Business. B.B.A. in Risk Management and Insurance, expected May 2028.</span></li>
         <li><strong>Georgia Southern University</strong><span>Coursework toward a B.B.A. in Finance, 2024 to 2026. Dean's List and Honor Roll for four semesters, 3.80 GPA.</span></li>
       </ul>
-      <p>Also: PCT Equity Fund, covering Alphabet. Phi Chi Theta. Founding member of the Red and Black Charity Foundation.</p>
     </div></div>
   </section>
 
   <section class="chapter center contact" id="contact" data-name="Contact">
     <div class="inner"><div class="block reveal">
-      <p class="kicker label"><span>07</span><span>Contact</span></p>
+      <p class="kicker label"><span>08</span><span>Contact</span></p>
       <h2>Say hello.</h2>
       <a class="mail line-link" href="mailto:aidentjhodgson@gmail.com">aidentjhodgson@gmail.com</a>
       <p class="phone"><a class="line-link" href="tel:+14046657894">(404) 665-7894</a></p>
